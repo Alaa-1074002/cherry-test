@@ -32,12 +32,16 @@
                 {# <td>{{ auto.gewicht }}</td> #}
                 <td>{{ auto.prijs }}</td>
                 {# <td>{{ auto.voorraad }}</td> #}
+<<<<<<< HEAD
                 <td>
                     <a href="{{ path('app_auto_show', {'id': auto.id}) }}" class="btn btn-info">show</a>
                     <a href="{{ path('app_auto_edit', {'id': auto.id}) }}" class="btn btn-warning">edit</a>
                     <a href="#" class="btn btn">{{ include('auto/_delete_form.html.twig') }}</a>
                   
                 </td>
+=======
+              
+>>>>>>> 42552dd (project added)
             </tr>
         {% else %}
             <tr>
