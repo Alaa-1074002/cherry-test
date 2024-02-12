@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Auto
+{% endblock %}
+
+{% block body %}
+	<h1>Auto</h1>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>Id</th>
+				<td>{{ auto.id }}</td>
+			</tr>
+			<tr>
+				<th>Model</th>
+				<td>{{ auto.model }}</td>
+			</tr>
+			<tr>
+				<th>Type</th>
+				<td>{{ auto.type }}</td>
+			</tr>
+			<tr>
+				<th>Kleur</th>
+				<td>{{ auto.kleur }}</td>
+			</tr>
+			<tr>
+				<th>Gewicht</th>
+				<td>{{ auto.gewicht }}</td>
+			</tr>
+			<tr>
+				<th>Prijs</th>
+				<td>{{ auto.prijs }}</td>
+			</tr>
+			<tr>
+				<th>Voorraad</th>
+				<td>{{ auto.voorraad }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<a href="{{ path('app_auto_index') }}" class="btn btn-info">back to list</a>
+
+	
+
+
+{% endblock %}

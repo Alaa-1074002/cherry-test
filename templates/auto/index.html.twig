@@ -32,7 +32,11 @@
                 {# <td>{{ auto.gewicht }}</td> #}
                 <td>{{ auto.prijs }}</td>
                 {# <td>{{ auto.voorraad }}</td> #}
-              
+                <td>
+                    <a href="{{ path('app_auto_show', {'id': auto.id}) }}" class="btn btn-info">show</a>
+                   
+                  
+                </td>
             </tr>
         {% else %}
             <tr>
