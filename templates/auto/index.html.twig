@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Auto index{% endblock %}
+
+{% block body %}
+  {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+    <h1>Auto index</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Type</th>
+                {# <th>Kleur</th> #}
+                {# <th>Gewicht</th> #}
+                <th>Prijs</th>
+                {# <th>Voorraad</th> #}
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for auto in autos %}
+            <tr>
+                <td>{{ auto.id }}</td>
+                <td>{{ auto.model }}</td>
+                <td>{{ auto.type }}</td>
+                {# <td>{{ auto.kleur }}</td> #}
+                {# <td>{{ auto.gewicht }}</td> #}
+                <td>{{ auto.prijs }}</td>
+                {# <td>{{ auto.voorraad }}</td> #}
+              
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_auto_new') }}" class="btn btn-success">Create new</a>
+{% endblock %}
